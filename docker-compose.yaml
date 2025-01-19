@@ -1,0 +1,16 @@
+services:
+  ug-breakin-in:
+    restart: unless-stopped
+    build: 
+      context: ./servers/BreakinIn
+      dockerfile: BreakinIn.Dockerfile
+    ports:
+      - "11100:11100"
+      - "10901:10901"
+    networks:
+      - undead-games-network
+
+networks:
+  undead-games-network:
+    driver: bridge
+    name: undead-games-network

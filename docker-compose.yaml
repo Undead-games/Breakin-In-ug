@@ -2,7 +2,7 @@ services:
   ug-breakin-in:
     restart: unless-stopped
     build: 
-      context: ./servers/BreakinIn
+      context: ./servers/Breakin-In-ug
       dockerfile: BreakinIn.Dockerfile
     ports:
       - "11100:11100"

@@ -93,6 +93,11 @@ namespace BreakinIn
                     return;
                 }
 
+                Console.WriteLine("===Message===");
+                Console.WriteLine("msg:" + c);
+                Console.WriteLine(body);
+                Console.WriteLine("=============");
+
                 var msg = (AbstractMessage)Activator.CreateInstance(c);
                 msg.Read(body);
 
